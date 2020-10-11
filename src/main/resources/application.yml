@@ -98,8 +98,8 @@ resilience4j.thread-pool-bulkhead:
         backendA:
             baseConfig: default
         backendB:
-            maxThreadPoolSize: 1
-            coreThreadPoolSize: 1
+            maxThreadPoolSize: 2000
+            coreThreadPoolSize: 1000
             queueCapacity: 1
 
 resilience4j.ratelimiter:

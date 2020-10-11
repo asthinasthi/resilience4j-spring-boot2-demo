@@ -127,8 +127,11 @@ public class BackendBController {
     }
 
     @GetMapping("futureTimeout")
-    public CompletableFuture<String> futureTimeout(){
-        return executeAsyncWithFallback(this::timeout, this::fallback);
+    public String futureTimeout(){
+        for(int i=0; i< 1000; i++){
+            executeAsyncWithFallback(this::timeout, this::fallback);
+        }
+        return "Something";
     }
 
     @GetMapping("fallback")
